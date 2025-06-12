@@ -23,7 +23,7 @@ echo "Hej världen! 🇸🇪"
 echo "こんにちは世界！🍣"          # Japanese: Hello, world!
 echo "你好，世界！ 🐼"             # Chinese (Simplified): Hello, world!
 echo "안녕하세요 세계! 🍚"         # Korean: Hello, world!
-
+echo "Icons:       "
 
 echo "✅ Setup complete."
 

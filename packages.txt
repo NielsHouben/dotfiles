@@ -2,4 +2,14 @@ stow
 zsh
 kitty
 neovim
+wofi
+dolphin
+hyprpaper
+hyprshot
+wl-clipboard
+btop
+fzf
+bat
+lazygit
+
 

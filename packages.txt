@@ -11,5 +11,6 @@ btop
 fzf
 bat
 lazygit
-
+tree
+waybar
 

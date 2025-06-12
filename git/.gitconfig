@@ -1,0 +1,9 @@
+[pull]
+	rebase = true
+[core]
+	editor = nvim
+[init]
+	defaultBranch = master
+[user]
+	email = niels.houben1@gmail.com
+	name = Niels Houben

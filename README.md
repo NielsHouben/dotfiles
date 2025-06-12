@@ -22,6 +22,3 @@ Simple setup for installing official and AUR packages. Will install yay helper i
 ## Remove symlinks
     stow -D zsh
 
-## Stow all at once
-    stow */
-

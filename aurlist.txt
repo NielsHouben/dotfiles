@@ -1,0 +1,6 @@
+brave-bin
+visual-studio-code-bin
+nerd-fonts-jetbrains-mono
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji

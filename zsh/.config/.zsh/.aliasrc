@@ -1,0 +1,32 @@
+# Basic shortcuts
+alias ll='ls -lah --color=auto'        # long listing, human-readable sizes, colored
+alias la='ls -A --color=auto'          # list all except . and ..
+alias l='ls -CF --color=auto'          # short listing, classify files by type
+
+# Grep with color output by default
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Tree
+alias tree='tree -C'
+alias tr="tree -a -C -I '.git|node_modules'"
+
+
+# Git shortcuts
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate --all'
+alias gd='git diff'
+alias lg='lazygit'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Clipboard
+alias copy='wl-copy'
+alias paste='wl-paste'
+

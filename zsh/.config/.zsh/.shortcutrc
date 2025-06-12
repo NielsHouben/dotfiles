@@ -1,0 +1,43 @@
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
+# Accept autosuggestion with Ctrl-L
+bindkey '^L' autosuggest-accept
+
+# Clear screen + scrollback with Ctrl-K
+clear-screen() {
+  zle clear-screen
+}
+zle -N clear-screen
+bindkey '^U' clear-screen
+
+# History cycling
+bindkey '^K' up-line-or-history
+bindkey '^J' down-line-or-history
+
+# Use fzf to pick a history command and insert it into command line
+fzf-history-widget() {
+  BUFFER=$(fc -rl 1 | fzf --tac | sed 's/^[ ]*[0-9]*[ ]*//')
+  CURSOR=${#BUFFER}
+  zle reset-prompt
+}
+zle -N fzf-history-widget
+
+bindkey '^H' fzf-history-widget
+
+# alt-backspace remove word
+bindkey '^[^?' backward-kill-word
+

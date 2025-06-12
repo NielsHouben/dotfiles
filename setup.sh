@@ -25,5 +25,9 @@ echo "你好，世界！ 🐼"             # Chinese (Simplified): Hello, world!
 echo "안녕하세요 세계! 🍚"         # Korean: Hello, world!
 echo "Icons:       "
 
+echo ""
+echo "Creating standard user directories"
+mkdir -p Desktop/  dev/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
+
 echo "✅ Setup complete."
 

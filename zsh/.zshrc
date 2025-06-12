@@ -4,7 +4,7 @@ export VISUAL=nvim
 autoload -Uz compinit promptinit vcs_info
 compinit
 promptinit
-setopt beep
+
 
 # === Vi mode ===
 bindkey -v
@@ -60,11 +60,23 @@ SAVEHIST=10000
 setopt share_history hist_ignore_all_dups
 
 # === Options ===
+setopt beep # no_beep
 setopt auto_cd
 setopt correct
-setopt no_beep
 setopt interactive_comments
 setopt extended_glob
+
+# Bell
+autoload -Uz add-zsh-hook
+
+function beep_on_error() {
+  local last_status=$?
+  if (( last_status != 0 )); then
+    print -n "\a"
+  fi
+}
+
+add-zsh-hook precmd beep_on_error
 
 # === aliases, shortcuts, and theme ===
 [ -f ~/.config/.zsh/.zshtheme ] && source ~/.config/.zsh/.zshtheme

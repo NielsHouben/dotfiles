@@ -78,6 +78,9 @@ function beep_on_error() {
 
 add-zsh-hook precmd beep_on_error
 
+# Only source nvm if it exists
+[ -s /usr/share/nvm/init-nvm.sh ] && . /usr/share/nvm/init-nvm.sh
+
 # === aliases, shortcuts, and theme ===
 [ -f ~/.config/.zsh/.zshtheme ] && source ~/.config/.zsh/.zshtheme
 [ -f ~/.config/.zsh/.aliasrc ] && source ~/.config/.zsh/.aliasrc 

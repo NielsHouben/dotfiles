@@ -1,0 +1,92 @@
+@define-color foreground     #a9b1d6;
+@define-color background     #1a1b26;
+@define-color selection      #28344a;
+@define-color border         #3d59a1;
+@define-color input-text     #c0caf5;
+@define-color input-border   #73daca;  /* Green highlight */
+@define-color highlight      #bb9af7;
+@define-color green          #73daca;
+@define-color entry-hover    #24283b;
+@define-color entry-active   #1f2335;
+
+* {
+  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-size: 18px;
+}
+
+/* Window */
+window {
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid @border;
+  border-radius: 8px;
+  background-color: @background;
+}
+
+/* Outer & Inner Boxes */
+#outer-box, #inner-box, #scroll {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: @background;
+}
+
+/* Input Box */
+#input {
+  margin: 5px 20px;
+  padding: 10px;
+  border: 2px solid @input-border;
+  border-radius: 4px;
+  background-color: @background;
+  color: @input-text;
+}
+
+#input image {
+  color: @input-border;
+  border: none;
+}
+
+#input * {
+  outline: none;
+}
+
+/* Entry Text */
+#text {
+  margin: 5px;
+  border: none;
+  color: @foreground;
+}
+
+/* Entry Appearance */
+#entry {
+  background-color: @background;
+  border-radius: 4px;
+  transition: background-color 100ms ease-in-out;
+}
+
+#entry:hover {
+  background-color: @entry-hover;
+  border-left: 3px solid @green;
+}
+
+/* Entry Arrows */
+#entry arrow {
+  color: @green;
+  border: none;
+}
+
+/* Selected Entry */
+#entry:selected {
+  border: 2px solid @green;
+  background-color: @entry-active;
+}
+
+#entry:selected #text {
+  color: @green;
+}
+
+#entry:drop(active) {
+  background-color: @green;
+  color: @background;
+}
+

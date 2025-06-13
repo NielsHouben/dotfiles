@@ -16,4 +16,5 @@ waybar
 lf
 man
 wlsunset
+pavucontrol
 

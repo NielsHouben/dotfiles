@@ -12,6 +12,10 @@ alias egrep='egrep --color=auto'
 alias tree='tree -C'
 alias tr="tree -a -C -I '.git|node_modules'"
 
+#Latex
+alias ltmk="latexmk -pdf -pvc"
+
+
 
 # Git shortcuts
 alias gs='git status'

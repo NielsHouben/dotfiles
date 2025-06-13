@@ -1,0 +1,8 @@
+texlive-core
+texlive-bin
+texlive-latexextra
+texlive-binextra
+texlive-fontsextra
+zathura
+zathura-pdf-mupdf
+

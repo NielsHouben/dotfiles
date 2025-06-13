@@ -15,4 +15,5 @@ tree
 waybar
 lf
 man
+wlsunset
 

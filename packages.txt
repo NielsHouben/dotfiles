@@ -6,6 +6,7 @@ wofi
 dolphin
 hyprpaper
 hyprshot
+hyprpicker
 wl-clipboard
 btop
 fzf
@@ -17,4 +18,5 @@ lf
 man
 wlsunset
 pavucontrol
+spotify
 

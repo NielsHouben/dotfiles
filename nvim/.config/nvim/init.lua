@@ -4,6 +4,15 @@ vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.showbreak = "↪ "
+
+
+
+
+
 -- Bootstrap lazy.nvim if not already installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

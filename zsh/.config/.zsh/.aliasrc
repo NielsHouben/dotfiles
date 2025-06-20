@@ -15,7 +15,7 @@ alias tr="tree -a -C -I '.git|node_modules'"
 #Latex
 alias ltmk="latexmk -pdf -pvc"
 
-
+alias sys="systemctl"
 
 # Git shortcuts
 alias gs='git status'

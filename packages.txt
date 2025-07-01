@@ -18,5 +18,4 @@ lf
 man
 wlsunset
 pavucontrol
-spotify
 

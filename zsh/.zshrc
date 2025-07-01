@@ -94,6 +94,5 @@ for plugin in zsh-autosuggestions zsh-syntax-highlighting; do
   [[ -f "$plugin_file" ]] && source "$plugin_file"
 done
 
-
-
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/nisse/.local/share/flatpak/exports/share
 

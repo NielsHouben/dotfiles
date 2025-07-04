@@ -1,9 +1,10 @@
 {
   "backlight": {
-  	"device": "intel_backlight",
-  	"format": "{percent}% {icon}",
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-"
+    "device": "intel_backlight",
+    "format": "<span size='13000' foreground='#fab387'>󰃠 </span>{percent}%",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "on-click": "brightnessctl set 1%-",
+    "on-click-right": "brightnessctl set +1%"
   }
 }
-

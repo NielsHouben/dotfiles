@@ -5,6 +5,8 @@ autoload -Uz compinit promptinit vcs_info
 compinit
 promptinit
 
+# Path
+export PATH="$HOME/scripts:$PATH"
 
 # === Vi mode ===
 bindkey -v
@@ -93,6 +95,4 @@ for plugin in zsh-autosuggestions zsh-syntax-highlighting; do
   plugin_file="$ZSH_PLUGIN_DIR/$plugin/${plugin}.zsh"
   [[ -f "$plugin_file" ]] && source "$plugin_file"
 done
-
-export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/nisse/.local/share/flatpak/exports/share
 

@@ -7,8 +7,8 @@
     font-weight: bold;
 }
 
+/* box.modules-center, */
 box.modules-left,
-box.modules-center,
 box.modules-right {
     background-color: rgba(17, 17, 27, 0.7);
     border: 1px solid @overlay1;

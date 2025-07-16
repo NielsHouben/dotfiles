@@ -7,19 +7,34 @@
     font-weight: bold;
 }
 
+box.modules-left,
+box.modules-center,
+box.modules-right {
+    background-color: rgba(17, 17, 27, 0.7);
+    border: 1px solid @overlay1;
+    border-top: 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
 window#waybar {
     background: transparent;
-    background-color: @crust;
+    /* background-color: @crust; */
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+    /* border-bottom: 1px solid @overlay1; */
 }
 
 #window {
-    margin: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 button {

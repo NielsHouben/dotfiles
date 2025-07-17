@@ -7,6 +7,7 @@ promptinit
 
 # Path
 export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
 # === Vi mode ===
 bindkey -v

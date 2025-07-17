@@ -50,6 +50,7 @@ button:hover {
 }
 
 #workspaces button {
+    color: @rosewater;
     padding: 0 4px;
 }
 

@@ -18,4 +18,5 @@ lf
 man
 wlsunset
 pavucontrol
+unzip
 

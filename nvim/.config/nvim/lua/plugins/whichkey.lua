@@ -5,6 +5,7 @@ return {
     wk.setup()
 
     wk.register({
+      f = { function() vim.lsp.buf.format() end, "Format Buffer" },
     }, { prefix = "<leader>" })
   end,
 }

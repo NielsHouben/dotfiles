@@ -9,6 +9,10 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.showbreak = "↪ "
 
+
+vim.g.mapleader = " "  -- spacebar as leader
+
+
 -- Bootstrap lazy.nvim if not already installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

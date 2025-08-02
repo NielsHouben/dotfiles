@@ -14,6 +14,11 @@ return {
         }
       }
     })
+
+    -- C/C++ LSP
+    lspconfig.clangd.setup({
+      cmd = { "clangd", "--background-index" },
+      filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" }
+    })
   end
 }
-

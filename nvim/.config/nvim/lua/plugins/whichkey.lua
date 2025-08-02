@@ -9,4 +9,3 @@ return {
     }, { prefix = "<leader>" })
   end,
 }
-

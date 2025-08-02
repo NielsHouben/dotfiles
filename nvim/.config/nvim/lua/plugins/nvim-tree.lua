@@ -29,4 +29,3 @@ return {
     }, { prefix = "<leader>" })
   end,
 }
-

@@ -1,8 +1,10 @@
 -- Basic options
 vim.opt.number = true
-vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
+vim.opt_local.tabstop = 4
+vim.opt_local.shiftwidth = 4
+vim.opt_local.expandtab = true
 
 
 vim.opt.wrap = true

@@ -4,10 +4,10 @@ return {
     local wk = require("which-key")
     wk.setup()
 
-    wk.register({
-      f = { function() vim.lsp.buf.format() end, "Format Buffer" },
-      d = { function() vim.diagnostic.open_float() end, "Show Diagnostics" },
-      a = { function() vim.lsp.buf.code_action() end, "Code Actions" },
-    }, { prefix = "<leader>" })
+    wk.add({
+      { "<leader>f", function() vim.lsp.buf.format() end, desc = "Format Buffer" },
+      { "<leader>d", function() vim.diagnostic.open_float() end, desc = "Show Diagnostics" },
+      { "<leader>a", function() vim.lsp.buf.code_action() end, desc = "Code Actions" },
+    })
   end,
 }

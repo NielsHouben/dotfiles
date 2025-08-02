@@ -24,8 +24,8 @@ return {
     })
 
     local wk = require("which-key")
-    wk.register({
-      e = { "<cmd>NvimTreeToggle<CR>", "Toggle File Explorer" },
-    }, { prefix = "<leader>" })
+    wk.add({
+      { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle File Explorer" },
+    })
   end,
 }

@@ -1,4 +1,4 @@
--- Set basic options
+-- Basic options
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.termguicolors = true
@@ -8,10 +8,6 @@ vim.opt.cursorline = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.showbreak = "↪ "
-
-
-
-
 
 -- Bootstrap lazy.nvim if not already installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -42,4 +38,27 @@ vim.cmd([[
 
   highlight CursorLine guibg=#101010
 ]])
+
+
+-- Format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  buffer = bufnr,
+  callback = function()
+    vim.lsp.buf.format({ bufnr = bufnr })
+  end,
+})
+
+local lspconfig = require("lspconfig")
+
+lspconfig.rust_analyzer.setup({
+  on_attach = on_attach,
+  settings = {
+    ["rust-analyzer"] = {
+      check = {
+        command = "clippy",
+      },
+    },
+  },
+})
+
 

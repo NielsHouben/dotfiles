@@ -32,5 +32,17 @@ return {
 
         -- Load extensions
         pcall(require("telescope").load_extension, "fzf")
+
+        -- Auto-select file in nvim-tree when opening through telescope
+        vim.api.nvim_create_autocmd("BufEnter", {
+            callback = function()
+                local bufname = vim.api.nvim_buf_get_name(0)
+                if bufname ~= "" and vim.fn.filereadable(bufname) == 1 then
+                    pcall(function()
+                        require("nvim-tree.api").tree.find_file(bufname)
+                    end)
+                end
+            end,
+        })
     end,
 }

@@ -2,29 +2,29 @@
 vim.opt.number = true
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.opt_local.tabstop = 4
-vim.opt_local.shiftwidth = 4
-vim.opt_local.expandtab = true
-
+vim.opt.smartindent = true
 
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.showbreak = "↪ "
 
+-- Show whitespace and end of line characters
+vim.opt.list = true
+vim.opt.listchars = { tab = '▸ ', trail = '·', space = '·' }
 
-vim.g.mapleader = " "  -- spacebar as leader
+vim.g.mapleader = " " -- spacebar as leader
 
 
 -- Bootstrap lazy.nvim if not already installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -45,11 +45,21 @@ vim.cmd([[
   highlight CursorLine guibg=#101010
 ]])
 
+-- Ensure tab settings apply to all file types
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function()
+        vim.opt_local.tabstop = 4
+        vim.opt_local.shiftwidth = 4
+        vim.opt_local.softtabstop = 4
+        vim.opt_local.expandtab = true
+    end,
+})
 
--- Format on save
+-- Format buffer before saving
 vim.api.nvim_create_autocmd("BufWritePre", {
-  buffer = bufnr,
-  callback = function()
-    vim.lsp.buf.format({ bufnr = bufnr })
-  end,
+    pattern = "*",
+    callback = function()
+        vim.lsp.buf.format({ async = false })
+    end,
 })

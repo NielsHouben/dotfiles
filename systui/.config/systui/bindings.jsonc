@@ -1,0 +1,99 @@
+[
+    {
+        "key": "o",
+        "label": "Open",
+        "command": "wofi --show drun"
+    },
+    {
+        "key": "p",
+        "label": "Power options",
+        "bindings": [
+            {
+                "key": "o",
+                "label": "Power off",
+                "command": "systemctl poweroff"
+            },
+            {
+                "key": "r",
+                "label": "Reboot",
+                "command": "systemctl reboot"
+            },
+            {
+                "key": "h",
+                "label": "Hibernate",
+                "command": "systemctl hibernate"
+            },
+            {
+                "key": "s",
+                "label": "Sleep/Suspend",
+                "command": "systemctl suspend"
+            },
+            {
+                "key": "u",
+                "label": "Suspend",
+                "command": "systemctl suspend"
+            },
+            {
+                "key": "l",
+                "label": "Logout",
+                "command": "hyprctl dispatch exit"
+            }
+        ]
+    },
+    {
+        "key": "s",
+        "label": "System management",
+        "bindings": [
+            {
+                "key": "u",
+                "label": "Update System",
+                "command": "sudo pacman -Syu"
+            },
+            {
+                "key": "c",
+                "label": "Clean Cache",
+                "command": "sudo pacman -Sc"
+            },
+            {
+                "key": "i",
+                "label": "System Info",
+                "command": "neofetch"
+            },
+            {
+                "key": "t",
+                "label": "Uptime",
+                "command": "uptime"
+            },
+            {
+                "key": "d",
+                "label": "Disk usage",
+                "command": "df -h"
+            },
+            {
+                "key": "m",
+                "label": "Memory usage",
+                "command": "free -h"
+            }
+        ]
+    },
+    {
+        "key": "b",
+        "label": "Bluetooth",
+        "command": "$HOME/scripts/bluetooth-menu.sh"
+    },
+    {
+        "key": "n",
+        "label": "Network",
+        "command": "$HOME/scripts/network-menu.sh"
+    },
+    {
+        "key": "w",
+        "label": "Change Wallpaper",
+        "command": "~/.config/hypr/scripts/change_wallpapers.sh"
+    },
+    {
+        "key": "h",
+        "label": "Help/Debug Info",
+        "command": "echo 'Listing files:' && ls -lh | grep '^-' | sort -k5,5 -hr | head -n 5 && echo 'Disk usage:' && df -h | grep '^/'"
+    }
+]

@@ -1,0 +1,7 @@
+set selection-clipboard clipboard
+
+set default-bg "#1B1B3A"
+set highlight-color "rgba(171, 164, 240, 0.5)"
+
+map <C-s> feedkeys ":source"
+

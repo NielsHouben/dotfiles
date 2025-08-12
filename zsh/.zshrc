@@ -61,6 +61,8 @@ HISTFILE="${history_dir}/history"
 HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history hist_ignore_all_dups
+setopt HIST_IGNORE_SPACE
+
 
 # === Options ===
 setopt no_beep # beep

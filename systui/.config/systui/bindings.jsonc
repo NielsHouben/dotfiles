@@ -93,7 +93,39 @@
     },
     {
         "key": "h",
-        "label": "Help/Debug Info",
-        "command": "echo 'Listing files:' && ls -lh | grep '^-' | sort -k5,5 -hr | head -n 5 && echo 'Disk usage:' && df -h | grep '^/'"
+        "label": "Hyprland",
+        "bindings": [
+            {
+                "key": "m",
+                "label": "Cycle current workspace across monitors",
+                "command": "hyprctl dispatch movecurrentworkspacetomonitor +1"
+            },
+            {
+                "key": "n",
+                "label": "Focus next monitor",
+                "command": "hyprctl dispatch focusmonitor +1"
+            },
+            {
+                "key": "p",
+                "label": "Focus previous monitor",
+                "command": "hyprctl dispatch focusmonitor -1"
+            },
+            {
+                // TODO: Make it so that the command gets run in background or something s othat ratatui and terminal can close, and then have the hyprctl dispatch happen on whatever is focused next (which will be what was previously focuses)
+                "key": "v",
+                "label": "Toggle floating mode for focused window",
+                "command": "sleep 2 && hyprctl dispatch togglefloating"
+            },
+            {
+                "key": "c",
+                "label": "Center focused window",
+                "command": "hyprctl dispatch centerwindow"
+            },
+            {
+                "key": "f",
+                "label": "Toggle fullscreen for focused window",
+                "command": "hyprctl dispatch fullscreen"
+            }
+        ]
     }
 ]

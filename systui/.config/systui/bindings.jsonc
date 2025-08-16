@@ -78,8 +78,8 @@
     },
     {
         "key": "b",
-        "label": "Bluetooth",
-        "command": "$HOME/scripts/bluetooth-menu.sh"
+        "label": "Restart Waybar",
+        "command": "killall waybar; waybar & disown"
     },
     {
         "key": "n",

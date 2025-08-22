@@ -19,6 +19,11 @@
                 "command": "systemctl reboot"
             },
             {
+                "key": "f",
+                "label": "Reboot into firmware setup",
+                "command": "systemctl reboot --firmware-setup"
+            },
+            {
                 "key": "h",
                 "label": "Hibernate",
                 "command": "systemctl hibernate"

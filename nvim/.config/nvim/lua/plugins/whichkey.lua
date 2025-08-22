@@ -22,6 +22,9 @@ return {
             { "<leader>th", "<cmd>Telescope help_tags<CR>",             desc = "Help Tags" },
             { "<leader>tr", "<cmd>Telescope oldfiles<CR>",              desc = "Recent Files" },
             { "<leader>tc", "<cmd>Telescope commands<CR>",              desc = "Commands" },
+
+            { "<leader>g",  group = "Git" },
+            { "<leader>gb", "<cmd>Gitsigns blame<CR>",                  desc = "Se who did what and when" },
         })
     end,
 }

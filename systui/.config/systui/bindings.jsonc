@@ -5,6 +5,11 @@
         "command": "wofi --show drun"
     },
     {
+        "key": "l",
+        "label": "Lock",
+        "command": "hyprlock"
+    },
+    {
         "key": "p",
         "label": "Power options",
         "bindings": [

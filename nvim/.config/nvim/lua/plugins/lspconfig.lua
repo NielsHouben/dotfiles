@@ -12,17 +12,17 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         -- Rust LSP
-        lspconfig.rust_analyzer.setup({
-            capabilities = capabilities,
-            settings = {
-                ["rust-analyzer"] = {
-                    cargo = { allFeatures = true },
-                    check = {
-                        command = "clippy"
-                    }
-                }
-            }
-        })
+        -- lspconfig.rust_analyzer.setup({
+        --     capabilities = capabilities,
+        --     settings = {
+        --         ["rust-analyzer"] = {
+        --             cargo = { allFeatures = true },
+        --             check = {
+        --                 command = "clippy"
+        --             }
+        --         }
+        --     }
+        -- })
 
         -- C/C++ LSP
         lspconfig.clangd.setup({

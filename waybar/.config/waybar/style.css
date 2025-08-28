@@ -100,6 +100,11 @@ button:hover {
     border-radius: 8px;
 }
 
+#cpu {
+    color: @text;
+    padding-right: 9px;
+}
+
 #clock {
     color: @maroon;
     border-bottom: 2px solid @maroon;

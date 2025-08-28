@@ -23,6 +23,11 @@
         "max-length": 20,
         "tooltip": false
     },
+    "cpu": {
+        "interval": 5,
+        "format": "{usage}% ",
+        "max-length": 10
+    },
     "clock": {
         "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"

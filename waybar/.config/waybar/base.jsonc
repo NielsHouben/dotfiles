@@ -29,7 +29,7 @@
         "max-length": 10
     },
     "clock": {
-        "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+        "format": " {:%a %d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "battery": {
@@ -62,7 +62,7 @@
         "tooltip-format-ethernet": "Ethernet: {ifname}\nIP: {ipaddr}"
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
             "default": [

@@ -25,6 +25,11 @@ return {
 
             { "<leader>g",  group = "Git" },
             { "<leader>gb", "<cmd>Gitsigns blame<CR>",                  desc = "Se who did what and when" },
+
+            { "<leader>gr", "<cmd>Make<CR>",                            desc = "Run project" },
+
+            { "<leader>w",  function() vim.cmd("write") end,            desc = "Save current buffer" },
+            { "<leader>m",  function() vim.cmd("write | make") end,     desc = "Run code with make" },
         })
     end,
 }

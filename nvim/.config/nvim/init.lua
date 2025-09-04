@@ -66,11 +66,37 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- R files use 2-space indentation
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "r",
+    callback = function()
+        vim.bo.tabstop = 2
+        vim.bo.shiftwidth = 2
+        vim.bo.softtabstop = 2
+        vim.bo.expandtab = true
+    end
+})
+
 -- Format buffer before saving
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
     callback = function()
         vim.lsp.buf.format({ async = false })
+    end,
+})
+
+-- Auto-format Python files with autopep8 on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.py",
+    callback = function()
+        -- Save cursor position
+        local view = vim.fn.winsaveview()
+        -- Run autopep8 on current file
+        vim.cmd("silent !autopep8 --in-place --aggressive --aggressive " .. vim.fn.expand("%"))
+        -- Reload the file so changes take effect
+        vim.cmd("edit!")
+        -- Restore cursor position
+        vim.fn.winrestview(view)
     end,
 })
 

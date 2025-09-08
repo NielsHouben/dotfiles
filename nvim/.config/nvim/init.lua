@@ -85,21 +85,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
 })
 
--- Auto-format Python files with autopep8 on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*.py",
-    callback = function()
-        -- Save cursor position
-        local view = vim.fn.winsaveview()
-        -- Run autopep8 on current file
-        vim.cmd("silent !autopep8 --in-place --aggressive --aggressive " .. vim.fn.expand("%"))
-        -- Reload the file so changes take effect
-        vim.cmd("edit!")
-        -- Restore cursor position
-        vim.fn.winrestview(view)
-    end,
-})
-
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "rust",
     callback = function()

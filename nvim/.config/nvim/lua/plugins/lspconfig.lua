@@ -11,6 +11,25 @@ return {
         -- Add completion capabilities
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
+
+        -- pip install 'python-lsp-server[all]'
+        lspconfig.pylsp.setup {
+            settings = {
+                pylsp = {
+                    plugins = {
+                        autopep8 = {
+                            enabled = true,
+                            args = { "--ignore=F841" },
+                        },
+                        pyflakes = { enabled = false },
+                        mccabe = { enabled = false },
+                        pycodestyle = { enabled = true },
+                    }
+                }
+            }
+        }
+
+
         -- Rust LSP
         -- lspconfig.rust_analyzer.setup({
         --     capabilities = capabilities,

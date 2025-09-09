@@ -103,6 +103,7 @@ button:hover {
 #cpu {
     color: @text;
     padding-right: 9px;
+    border-bottom: 2px solid @text;
 }
 
 #clock {

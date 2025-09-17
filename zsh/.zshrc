@@ -89,6 +89,7 @@ setopt extended_glob
 # === aliases, shortcuts, and theme ===
 [ -f ~/.config/.zsh/.zshtheme ] && source ~/.config/.zsh/.zshtheme
 [ -f ~/.config/.zsh/.aliasrc ] && source ~/.config/.zsh/.aliasrc 
+[ -f ~/.config/.zsh/.shortcutrc ] && source ~/.config/.zshextended/.aliasextendedrc
 [ -f ~/.config/.zsh/.shortcutrc ] && source ~/.config/.zsh/.shortcutrc 
 
 # === Plugins ===

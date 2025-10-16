@@ -5,3 +5,5 @@ set highlight-color "rgba(171, 164, 240, 0.5)"
 
 map <C-s> feedkeys ":source"
 
+set first-page-column 1
+

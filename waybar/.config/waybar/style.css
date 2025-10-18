@@ -102,7 +102,7 @@ button:hover {
 
 #cpu {
     color: @text;
-    padding-right: 9px;
+    padding-right: 5px;
     border-bottom: 2px solid @text;
 }
 

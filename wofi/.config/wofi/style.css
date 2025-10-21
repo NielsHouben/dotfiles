@@ -1,13 +1,13 @@
-@define-color foreground     #a9b1d6;
-@define-color background     #1a1b26;
-@define-color selection      #28344a;
-@define-color border         #3d59a1;
-@define-color input-text     #c0caf5;
-@define-color input-border   #73daca;  /* Green highlight */
-@define-color highlight      #bb9af7;
-@define-color green          #73daca;
-@define-color entry-hover    #24283b;
-@define-color entry-active   #1f2335;
+@define-color foreground     #aeefff;      /* Frosted blue text */
+@define-color background     #101624;      /* Deep frosted blue */
+@define-color selection      #1a2336;      /* Slightly lighter frosted blue */
+@define-color border         #4fc3f7;      /* Soft neon blue border */
+@define-color input-text     #aeefff;      /* Frosted blue input */
+@define-color input-border   #4fc3f7;      /* Soft neon blue highlight */
+@define-color highlight      #4fc3f7;      /* Soft neon blue highlight */
+@define-color blue-accent    #4fc3f7;      /* Accent blue */
+@define-color entry-hover    #18213a;      /* Hover frosted blue */
+@define-color entry-active   #1e2740;      /* Active frosted blue */
 
 * {
   font-family: 'CaskaydiaCove Nerd Font', monospace;
@@ -44,6 +44,7 @@ window {
 #input image {
   color: @input-border;
   border: none;
+  /* box-shadow: 0 0 8px 2px @input-border; */
 }
 
 #input * {
@@ -55,6 +56,7 @@ window {
   margin: 5px;
   border: none;
   color: @foreground;
+  text-shadow: 0 0 2px @border;
 }
 
 /* Entry Appearance */
@@ -66,27 +68,27 @@ window {
 
 #entry:hover {
   background-color: @entry-hover;
-  border-left: 3px solid @green;
+  border-left: 3px solid @blue-accent;
 }
 
-/* Entry Arrows */
 #entry arrow {
-  color: @green;
+  color: @blue-accent;
   border: none;
 }
 
 /* Selected Entry */
 #entry:selected {
-  border: 2px solid @green;
+  border: 2px solid @blue-accent;
   background-color: @entry-active;
 }
 
 #entry:selected #text {
-  color: @green;
+  color: @blue-accent;
+  text-shadow: 0 0 3px @blue-accent; 
 }
 
 #entry:drop(active) {
-  background-color: @green;
+  background-color: @blue-accent;
   color: @background;
 }
 

@@ -1,0 +1,10 @@
+@define-color primary alpha(#add8e6, 0.93);
+@define-color secondary alpha(#87cefa, 0.93);
+@define-color accent #e0e7ef;
+@define-color warning #ffe066;
+@define-color success #b9fbc0;
+@define-color info #a7c7e7;
+@define-color background #002946;
+@define-color surface #000;
+@define-color border #6c7a89;
+@define-color text #eaf6fb;

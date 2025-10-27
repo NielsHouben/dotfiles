@@ -47,6 +47,7 @@ button {
     margin-right: 3px;
     background-color: @surface;
     border: 1px solid @border;
+    color: @text;
     border-radius: 8px;
 }
 
@@ -63,7 +64,7 @@ button:hover {
 
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: alpha(@surface, 0.3);
     color: @primary;
     border: 1px solid @primary;
 }
@@ -93,6 +94,7 @@ button:hover {
     background-color: @surface;
     border: 1px solid @border;
     border-radius: 8px;
+    color: @text;
 }
 
 #cpu,
@@ -135,5 +137,15 @@ button:hover {
     margin-right: 4px;
     padding-left: 4px;
     padding-right: 4px;
+}
+
+#battery.warning {
+    color: @warning;
+    border-bottom: 2px solid @warning;
+}
+
+#battery.critical {
+    color: @critical;
+    border-bottom: 2px solid @critical;
 }
 

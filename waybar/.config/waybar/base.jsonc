@@ -37,13 +37,13 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
-        "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
-        "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
-        "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-        "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-        "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
-        "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-warning": "{icon} {capacity}%",
+        "format-critical": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-full": " {capacity}%",
         "format-icons": [
             "",
             "",
@@ -54,10 +54,10 @@
         "tooltip-format": "{time}"
     },
     "network": {
-        "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-        "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰈁 </span>{ifname}",
-        "format-linked": "<span size='13000' foreground='#f5e0dc'>󰤭  </span>{ifname} (No IP) ",
-        "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈁 {ifname}",
+        "format-linked": "󰤭  {ifname} (No IP) ",
+        "format-disconnected": "  Disconnected",
         "tooltip-format-wifi": "Signal Strength: {signalStrength}%",
         "tooltip-format-ethernet": "Ethernet: {ifname}\nIP: {ipaddr}"
     },

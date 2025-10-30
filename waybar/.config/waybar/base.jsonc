@@ -25,11 +25,11 @@
     },
     "cpu": {
         "interval": 5,
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "max-length": 10
     },
     "clock": {
-        "format": "  {:%a %d %H:%M}",
+        "format": " {:%a %d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "battery": {
@@ -62,7 +62,7 @@
         "tooltip-format-ethernet": "Ethernet: {ifname}\nIP: {ipaddr}"
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
             "default": [
